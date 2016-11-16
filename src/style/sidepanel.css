@@ -1,0 +1,51 @@
+.panel {
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  position: fixed;
+}
+.links {
+  transform: rotate(-90deg);
+}
+
+.link {
+  text-align: center;
+  margin-left: 10px;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+    &:hover {
+      text-decoration: underline;
+    }
+}
+.alink {
+  composes: link;
+  text-decoration: underline;
+}
+.dot {
+  text-align: center;
+  margin-left: 10px;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 17px 5vh;
+}
+.logo {
+  width: 80px;
+  height: auto;
+}
+.logowr {
+  text-align: center;
+  margin-top: 2vh;
+}

@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EAE5FF;
+}
+.title {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 3rem;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+.svg {
+  @media (max-width: 768px) {
+    width: 70vw;
+    margin-top: -20vh;
+  }
+}

@@ -1,0 +1,48 @@
+.special {
+  margin-right: -10px;
+  margin-top: 20px;
+  color: #9B9B9B;
+  filter: drop-shadow(0px 1px 2px grey);
+  &:hover > g {
+    color: #D0021B;
+    cursor: pointer;
+  }
+}
+.shadow {
+  filter: drop-shadow(10px 10px 5px grey);
+}
+.activeLink {
+  color: #4A4A4A !important;
+}
+.cards {
+  margin-left: 10vw !important;
+  margin-top: 0 !important;
+  flex-wrap: wrap;
+}
+.card {
+  margin-right: 5vh;
+  @media (min-width: 768px) {
+    max-width: 200px;
+  }
+  &:hover {
+    background-color: #F8F8F8;
+  }
+}
+.price {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+.cats {
+  margin-top: 20px;
+  margin-left: 10vw;
+}
+.category {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #9B9B9B;
+}

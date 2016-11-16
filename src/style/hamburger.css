@@ -1,0 +1,32 @@
+.wrapburger {
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nknr {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 2rem;
+}
+.fwr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.link {
+  font-family: 'PT Sans';
+  font-size: 1.5rem;
+  margin-top: 2vh;
+}
+.cat {
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 1.5rem !important;
+  margin-top: 4vh;
+}

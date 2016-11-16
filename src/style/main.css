@@ -1,0 +1,43 @@
+.image {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+  vertical-align: middle;
+  transition: height 999999s;
+}
+.main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+.name {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 1rem;
+}
+.text_maski {
+  text-align: center;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 4.5rem;
+}
+.text_other {
+  text-align: center;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.number {
+  margin-bottom: 5vh;
+  text-align: center;
+  font-family: 'PT Sans';
+  font-weight: bold;
+  font-size: 1rem;
+}
+.button {
+  margin-bottom: 35vh;
+  width: 60vw;
+  height: 20vh;
+}
