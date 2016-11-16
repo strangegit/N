@@ -46,6 +46,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props)
     const Goods = AsyncComponent(() =>
       new Promise((resolve) => {
         require.ensure([], () => {

@@ -4,8 +4,9 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { compose, createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import {reducer as burgerMenu} from 'redux-burger-menu';
+import {actionTypes} from 'redux-localstorage';
 
-import persistState, { mergePersistedState } from 'redux-localstorage';
+import persistState from 'redux-localstorage';
 import adapter from 'redux-localstorage/lib/adapters/localStorage';
 import filter from 'redux-localstorage-filter';
 
@@ -62,18 +63,24 @@ const rootReducers = (state = initialState, action) => {
       }
     }
   }
+  else if (action.type === actionTypes.INIT) {
+    const persistedState = action.payload.rooty.basket.basket
+    return {...state,
+      basket: {
+        basket: persistedState
+      }
+    }
+  }
   else {
     return state
   }
 }
 
-const reducerRH = combineReducers({rooty: rootReducers, burgerMenu});
-
-const reducer = compose(mergePersistedState())(reducerRH);
-const storage = compose(filter('rooty'))(adapter(window.localStorage));
+const reducers = combineReducers({rooty: rootReducers, burgerMenu});
+const storage = compose(filter('rooty.basket'))(adapter(window.localStorage));
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancer = composeEnhancers(persistState(storage, 'nknr_basket'));
-const store = createStore(reducer, enhancer);
+const store = createStore(reducers, enhancer);
 
 ReactDOM.render(
   <Provider store={store}><App history={history}/></Provider>,
