@@ -10,7 +10,7 @@ import persistState from 'redux-localstorage';
 import adapter from 'redux-localstorage/lib/adapters/localStorage';
 import filter from 'redux-localstorage-filter';
 
-import App from './App.js'
+import App from './App.js';
 
 const history = createBrowserHistory();
 
