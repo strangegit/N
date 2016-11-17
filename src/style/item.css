@@ -35,6 +35,7 @@
   width: 20vw;
   @media (max-width: 768px) {
     width: 50vw;
+    transition: height 999999s;
   }
   height: 8vh;
   font-family: 'PT Sans';

@@ -47,6 +47,7 @@
     width: 75%;
     font-size: 1.2rem;
     min-height: 40px;
+    transition: height 999999s;
   }
 }
 
@@ -69,6 +70,7 @@
   @media (max-width: 768px) {
     width: 50vw;
     min-height: 40px;
+    transition: height 999999s;
   }
 }
 .wrap {
@@ -124,5 +126,6 @@
   @media (max-width: 768px) {
     width: 80vw;
     min-height: 60px;
+    transition: height 999999s;
   }
 }
