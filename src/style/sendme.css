@@ -72,9 +72,9 @@
 }
 .wrap {
   position: relative;
-  width: 30vh;
-  height: 30vh;
   @media (min-width: 768px) {
+    width: 30vh;
+    height: 30vh;
     &:after {
       content: attr(data-content);
       line-height: 30vh;
