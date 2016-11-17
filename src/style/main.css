@@ -3,7 +3,9 @@
   object-position: center;
   height: 100vh;
   vertical-align: middle;
-  transition: height 999999s;
+  @media (max-width: 768px) {
+    transition: height 999999s;
+  }
 }
 .main {
   display: flex;
@@ -13,12 +15,16 @@
   align-items: center;
   @media (max-width: 768px) {
     justify-content: center;
+    transition: height 999999s;
   }
 }
 .name {
   text-align: center;
   margin-top: 5vh;
   font-size: 1rem;
+  @media (max-width: 768px) {
+    transition: margin-top 999999s;
+  }
 }
 .text_maski {
   text-align: center;
@@ -42,8 +48,14 @@
 .button {
   width: 60vw;
   height: 20vh;
+  @media (max-width: 768px) {
+    transition: height 999999s;
+  }
 }
 .buttonwr {
   display: block;
   margin-top: 4vh;
+  @media (max-width: 768px) {
+    transition: margin-top 999999s;
+  }
 }
