@@ -8,6 +8,7 @@ import SidePanel from './sidepanel.js';
 import Floating from './floating.js';
 import Hamburger from './hamburger.js';
 import Swipeable from 'react-swipeable';
+import {action as toggleMenu} from 'redux-burger-menu';
 
 import './style/bulma.sass';
 import app from './style/app.css';
