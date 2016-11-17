@@ -13,6 +13,7 @@ class SendMe extends Component {
   }
 
   handleTextarea(event) {
+    event.target.style.height = (event.target.scrollHeight)+"px";
     this.setState({textarea: event.target.value});
   }
 
