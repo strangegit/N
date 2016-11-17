@@ -3,14 +3,13 @@ import { Match } from 'react-router';
 import Router from 'react-router-addons-controlled/ControlledBrowserRouter';
 import contentful from 'contentful';
 import { connect } from 'react-redux';
-
+import {Goods, Main, Item, SendMe, Faq, About, Thanks} from './const/asyncwrap.js';
 import SidePanel from './sidepanel.js';
-import AsyncComponent from './async.js';
 import Floating from './floating.js';
 import Hamburger from './hamburger.js';
 
 import './style/bulma.sass';
-import app from './style/app.css'
+import app from './style/app.css';
 
 class App extends Component {
 
@@ -46,57 +45,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props)
-    const Goods = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./goods.js'));
-        }, "goods")
-      }).then(module => module.default)
-    );
-    const Main = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./main.js'));
-        }, "welcome")
-      }).then(module => module.default)
-    );
-    const Item = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./item.js'));
-        }, "item")
-      }).then(module => module.default)
-    );
-    const SendMe = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./sendme.js'));
-        }, "sendme")
-      }).then(module => module.default)
-    );
-    const Faq = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./faq.js'));
-        }, "faq")
-      }).then(module => module.default)
-    );
-    const About = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./about.js'));
-        }, "about")
-      }).then(module => module.default)
-    );
-    const Thanks = AsyncComponent(() =>
-      new Promise((resolve) => {
-        require.ensure([], () => {
-          resolve(require('./thanks.js'));
-        }, "thanks")
-      }).then(module => module.default)
-    );
-
     return (
       <Router history={this.props.history} location={this.props.location} action={this.props.action} onChange={this.onChange}>
         <div>
@@ -114,9 +62,10 @@ class App extends Component {
               <Match exactly pattern="/thanks" component={Thanks}/>
               <Match exactly pattern="/sendme" component={SendMe}/>
           </div>
-            <Floating/>
-          </div></div>
-        </Router>
+          <Floating/>
+          </div>
+        </div>
+      </Router>
     );
   }
 }

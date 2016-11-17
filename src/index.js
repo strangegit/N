@@ -64,7 +64,7 @@ const rootReducers = (state = initialState, action) => {
     }
   }
   else if (action.type === actionTypes.INIT) {
-    const persistedState = action.payload.rooty.basket.basket
+    const persistedState = action.payload ? action.payload.rooty.basket.basket : [];
     return {...state,
       basket: {
         basket: persistedState
