@@ -1,4 +1,3 @@
-import React from 'react';
 import AsyncComponent from '../async.js';
 
 export const Goods = AsyncComponent(() =>

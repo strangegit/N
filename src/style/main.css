@@ -37,7 +37,9 @@
   font-size: 1rem;
 }
 .button {
-  margin-bottom: 35vh;
   width: 60vw;
   height: 20vh;
+}
+.buttonwr {
+  margin-bottom: 35vh;
 }

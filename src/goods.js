@@ -5,6 +5,13 @@ import { connect } from 'react-redux';
 import goods from './style/goods.css';
 
 class Goods extends Component {
+  componentWillAppear() {
+    console.log(12)
+  }
+  componentWillEnter(callback) {
+        callback();
+        console.log('will enter');
+    }
 
   render() {
 

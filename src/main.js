@@ -29,7 +29,7 @@ class Main extends Component {
               <div className={main.text_other}>другое на заказ</div>
             </div>
             <div className={`is-hidden-mobile ${main.number}`}>23</div>
-            <Link to='/goods' className="is-hidden-tablet has-text-centered"><div className={`button is-large is-warning ${main.button}`}>в каталог</div></Link>
+            <Link to='/goods' className={`is-hidden-tablet has-text-centered ${main.buttonwr}`}><div className={`button is-large is-warning ${main.button}`}>в каталог</div></Link>
           </div>
           </div>
         </div>
