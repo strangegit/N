@@ -71,6 +71,7 @@
     "react-router-addons-controlled": "^0.0.1",
     "react-sanfona": "https://github.com/daviferreira/react-sanfona.git#25ec7defc63cdfafa4c28024ee1f01c0ab78d0b5",
     "react-slick": "^0.14.5",
+    "react-swipeable": "^3.7.0",
     "redux": "^3.6.0",
     "redux-burger-menu": "^0.0.5",
     "redux-localstorage": "rc",

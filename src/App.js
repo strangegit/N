@@ -7,6 +7,7 @@ import {Goods, Main, Item, SendMe, Faq, About, Thanks} from './const/asyncwrap.j
 import SidePanel from './sidepanel.js';
 import Floating from './floating.js';
 import Hamburger from './hamburger.js';
+import Swipeable from 'react-swipeable';
 
 import './style/bulma.sass';
 import app from './style/app.css';
@@ -47,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <Router history={this.props.history} location={this.props.location} action={this.props.action} onChange={this.onChange}>
-        <div>
+        <Swipeable onSwipingRight={() => this.props.toggleMenu()} onSwipingLeft={() => this.props.toggleMenu()}>
           <Hamburger/>
           <div className={`${app.marginforall} columns is-gapless`}>
           <div className="column is-narrow is-hidden-mobile" style={{minWidth: 100}}>
@@ -64,7 +65,7 @@ class App extends Component {
           </div>
           <Floating/>
           </div>
-        </div>
+        </Swipeable>
       </Router>
     );
   }
@@ -78,4 +79,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    toggleMenu: () => {
+      dispatch(toggleMenu());
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
