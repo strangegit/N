@@ -46,7 +46,7 @@ class Goods extends Component {
               </svg>
             </Link>
           </div>
-          {items.length && <div className={`tile is-ancestor ${goods.cards}`}>
+          {items.length && <div className={`tile is-ancestor is-marginless ${goods.cards}`}>
             {items.map((item) =>
               <Link to={`/goods/${item.fields.category}/${item.fields.id}`} key={item.fields.category+item.fields.id} className={`tile is-3 ${goods.card}`}>
                 <div className="tile is-child">
