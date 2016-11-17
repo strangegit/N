@@ -22,14 +22,16 @@ class Main extends Component {
           </div>
           <div className="column is-half is-paddingless">
           <div className={main.main}>
-            <div className={main.name}>Anastasia Kriazhevskaia</div>
+            <div className={`is-hidden-mobile ${main.name}`}>Anastasia Kriazhevskaia</div>
             <div>
               <div className={main.text_maski}>Маски</div>
               <div className={main.text_other}>Чехлы, броши,</div>
               <div className={main.text_other}>другое на заказ</div>
+              <Link to='/goods' className={`is-hidden-tablet has-text-centered ${main.buttonwr}`}>
+                <div className={`button is-large is-warning ${main.button}`}>в каталог</div>
+              </Link>
             </div>
             <div className={`is-hidden-mobile ${main.number}`}>23</div>
-            <Link to='/goods' className={`is-hidden-tablet has-text-centered ${main.buttonwr}`}><div className={`button is-large is-warning ${main.button}`}>в каталог</div></Link>
           </div>
           </div>
         </div>
