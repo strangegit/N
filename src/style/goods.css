@@ -15,7 +15,9 @@
   color: #4A4A4A !important;
 }
 .cards {
-  margin-left: 10vw !important;
+  @media (min-width: 768px) {
+    margin-left: 10vw !important;
+  }
   margin-top: 0 !important;
   flex-wrap: wrap;
 }
